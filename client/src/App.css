@@ -1,0 +1,20 @@
+header {
+	background-image: url(./assets/images/project-banner.png);
+	background-size: cover;
+}
+
+form div{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+}
+
+form label{
+	font-size: large;
+}
+
+form input, textarea{
+	border: 1px solid black;
+	padding: 4px 10px;
+	border-radius: 5px;
+}
