@@ -3,18 +3,20 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { RotatingLines } from 'react-loader-spinner'
 
 function Form() {
 
     const [name, setName] = useState("");
     const [number, setNumber] = useState("");
     const [email, setEmail] = useState("");
+    const [loading, setLoading] = useState(false);
 
     const params = useParams();
 
     const handleSubmit = async(event) => {
         event.preventDefault();
-
+        setLoading(true);
         try {
             const response = await axios.post(
                 `http://localhost:3001/user/data/${params.user}`,
@@ -25,6 +27,7 @@ function Form() {
             });
             if(response.status == 200) {
                 toast.success("Joined!!");
+                setLoading(false);
                 setName("");
                 setEmail("");
                 setNumber("");
@@ -56,8 +59,21 @@ function Form() {
                 </div>
                 <div>    
                     <button className="bg-[#00715D] text-white px-4 py-2 
-                    rounded">
-                        Send Message
+                    rounded flex justify-center">
+                        {
+                            loading ?
+                            <RotatingLines
+                            visible={true}
+                            height="30"
+                            width="30"
+                            strokeWidth="5"
+                            strokeColor="white"
+                            animationDuration="0.75"
+                            ariaLabel="rotating-lines-loading"
+                            wrapperStyle={{}}
+                            wrapperClass=""
+                            /> : <> Send Message </>
+                        }
                     </button>
                 </div>
             </form>
