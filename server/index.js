@@ -19,30 +19,14 @@ app.get("/", (req, res) => {
     res.send("Hello World!");
 });
 
-app.post("/user/data", async(req, res) => {
-    const { 
-        firstName, 
-        lastName, 
-        phoneNumber, 
-        email, 
-        message 
-    } = req.body;
+app.post("/user/data/:user", async(req, res) => {
+    const { name, email, phoneNumber } = req.body;
+    const user = req.params.user;
 
     try {
-        await User.create({
-            firstName,
-            lastName,
-            phoneNumber,
-            email,
-            message
-        });
+        await User.create({ name, email, phoneNumber, user });
         res.status(200).json("User added");
     } catch(err) {
         res.status(500).json("Failed");
     }
 });
-
-
-
-
-// 5rxXASgIwwgX1yMv

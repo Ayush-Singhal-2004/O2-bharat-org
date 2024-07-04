@@ -1,14 +1,22 @@
-function CardTile() {
+import { useNavigate } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
+function CardTile(props) {
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/form/${props.user}`);
+    };
+
     return (
-        <div className="h-[45vh] w-[18vw] shadow-md rounded-md cursor-pointer 
-        max-sm:w-[62vw] max-sm:h-[40vh]">
-            <img src="https://images.rawpixel.com/image_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg" 
-            alt="" className="rounded-t"
-            />
-            <div className="px-4 py-2">
-                <p>Project tile</p>
-            </div>
-        </div>
+        <Card style={{ width: '18rem' }} className="cursor-pointer" onClick={handleClick}>
+            <Card.Img variant="top" src={props.image} />
+            <Card.Body>
+                <Card.Title>{props.title}</Card.Title>
+            </Card.Body>
+        </Card>
     )
 }
 
