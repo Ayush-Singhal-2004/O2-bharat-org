@@ -1,3 +1,7 @@
+* {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 header {
 	background-image: url(./assets/images/project-banner.png);
 	background-size: cover;
@@ -22,4 +26,26 @@ form input {
 
 form button {
 	margin-top: 15px;
+}
+
+.card-container {
+	animation: card-animation 1.4s ease;
+}
+
+.form-container {
+	animation: form-animation 1s ease;
+}
+
+@keyframes card-animation {
+	0% {
+		opacity: 0.3;
+		transform: translateY(80px)
+	}
+}
+
+@keyframes form-animation {
+	0% {
+		opacity: 0.1;
+		transform: scale(0.9)
+	}
 }

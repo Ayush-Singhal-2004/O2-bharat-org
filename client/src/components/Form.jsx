@@ -4,8 +4,11 @@ import { useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { RotatingLines } from 'react-loader-spinner'
+import { useNavigate } from "react-router-dom";
 
 function Form() {
+
+    const navigate = useNavigate(); 
 
     const [name, setName] = useState("");
     const [number, setNumber] = useState("");
@@ -31,6 +34,9 @@ function Form() {
                 setName("");
                 setEmail("");
                 setNumber("");
+                setTimeout(() => {
+                    navigate("/")
+                }, 1500)
             }
         } catch(err) {
             console.log(err);
@@ -38,7 +44,7 @@ function Form() {
     };
 
     return (
-        <div>
+        <div className="form-container">
             <ToastContainer />
             <form className="w-[30vw] py-8 px-10 shadow-lg rounded-md max-sm:w-[85vw] 
             max-sm:px-5 max-sm:py-4" onSubmit={handleSubmit}>
