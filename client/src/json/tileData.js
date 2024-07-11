@@ -1,31 +1,38 @@
+import familyImg from "../assets/images/family.png"
+import ngoImg from "../assets/images/ngo.png"
+import volunteerImg from "../assets/images/volunteer.png"
+import supporterImg from "../assets/images/supporter.png"
+import businessImg from "../assets/images/business.png"
+import survivorImg from "../assets/images/Survivor.png"
+
 export const tileData = [
     {
-        "image": "https://images.rawpixel.com/image_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg",
+        "image": familyImg,
         "title": "Join us as Family if you have/are a survivor",
         "user": "family"
     },
     {
-        "image": "https://images.rawpixel.com/image_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg",
+        "image": ngoImg,
         "title": "Join us as an NGO",
         "user": "NGO"
     },
     {
-        "image": "https://images.rawpixel.com/image_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg",
+        "image": volunteerImg,
         "title": "Join us as an Volunteer",
         "user": "volunteer"
     },
     {
-        "image": "https://images.rawpixel.com/image_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg",
+        "image": supporterImg,
         "title": "Join us as an Supporter",
         "user": "supporter"
     },
     {
-        "image": "https://images.rawpixel.com/image_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg",
+        "image": businessImg,
         "title": "Join us as an Business",
         "user": "business"
     },
     {
-        "image": "https://images.rawpixel.com/image_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg",
+        "image": survivorImg,
         "title": "Report a Survivor",
         "user": "survivor"
     }

@@ -11,13 +11,15 @@ function CardTile(props) {
     };
 
     return (
-        <Card style={{ width: '18rem' }} className="cursor-pointer border-none shadow-md" 
-        onClick={handleClick}>
-            <Card.Img variant="top" src={props.image} />
-            <Card.Body>
-                <Card.Title>{props.title}</Card.Title>
-            </Card.Body>
-        </Card>
+        <div className="card-container">
+            <Card style={{ width: '18rem' }} className="cursor-pointer border-none shadow-md" 
+            onClick={handleClick}>
+                <Card.Img variant="top" src={props.image} />
+                <Card.Body>
+                    <Card.Title>{props.title}</Card.Title>
+                </Card.Body>
+            </Card>
+        </div>
     )
 }
 
